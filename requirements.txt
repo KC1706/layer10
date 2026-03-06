@@ -1,0 +1,15 @@
+requests==2.31.0
+pydantic>=2.7.0
+instructor==1.2.6
+litellm==1.34.0
+google-generativeai==0.8.6
+protobuf>=5.26.1,<6
+recordlinkage==0.16
+thefuzz==0.22.1
+sentence-transformers==2.6.1
+rank_bm25==0.2.2
+networkx==3.3
+fastapi==0.110.0
+uvicorn==0.29.0
+streamlit>=1.36.0
+pyvis==0.3.2

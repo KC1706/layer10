@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+            <script src="lib/bindings/utils.js"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/dist/vis-network.min.css" integrity="sha512-WgxfT5LWjfszlPHXRmBWHkV2eceiWTOBvrKCNbdgDYTHrT2AeLCGbF4sZlZw3UMN3WtL0tGUoIAKsu8mllg/XA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/vis-network/9.1.2/dist/vis-network.min.js" integrity="sha512-LnvoEWDFrqGHlHmDD2101OrLcbsfkrzoSpvtSQtxK3RMnRV0eOkhhBN2dXHKRrUU8p2DGRTk35n4O8nWSVe1mQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+            
+        
+<center>
+<h1></h1>
+</center>
+
+<!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
+<script type="text/javascript" src="../node_modules/vis/dist/vis.js"> </script>-->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+          crossorigin="anonymous"
+        />
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+          crossorigin="anonymous"
+        ></script>
+
+
+        <center>
+          <h1></h1>
+        </center>
+        <style type="text/css">
+
+             #mynetwork {
+                 width: 100%;
+                 height: 600px;
+                 background-color: #ffffff;
+                 border: 1px solid lightgray;
+                 position: relative;
+                 float: left;
+             }
+
+             
+
+             
+
+             
+        </style>
+    </head>
+
+
+    <body>
+        <div class="card" style="width: 100%">
+            
+            
+            <div id="mynetwork" class="card-body"></div>
+        </div>
+
+        
+        
+
+        <script type="text/javascript">
+
+              // initialize global variables.
+              var edges;
+              var nodes;
+              var allNodes;
+              var allEdges;
+              var nodeColors;
+              var originalNodes;
+              var network;
+              var container;
+              var options, data;
+              var filter = {
+                  item : '',
+                  property : '',
+                  value : []
+              };
+
+              
+
+              
+
+              // This method is responsible for drawing the graph, returns the drawn network
+              function drawGraph() {
+                  var container = document.getElementById('mynetwork');
+
+                  
+
+                  // parsing and collecting nodes and edges from the python
+                  nodes = new vis.DataSet([{"color": "#add8e6", "font": {"color": "black"}, "id": "planned_feature_update_contributor_acknowledgments_list", "label": "Update contributor acknowledgments list", "shape": "dot", "title": "Type: Planned Feature"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "planned_feature_v4_0_0_release", "label": "v4.0.0 release", "shape": "dot", "title": "Type: Planned Feature"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "feature_intent_application_general", "label": "Intent of application", "shape": "dot", "title": "Type: Planned Feature"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "concept_status_completed", "label": "completed", "shape": "dot", "title": "Type: Concept"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "feature_code_of_conduct_reproduction", "label": "Code of Conduct reproduction", "shape": "dot", "title": "Type: Planned Feature"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "concept_status_pending", "label": "pending", "shape": "dot", "title": "Type: Concept"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "concept_second_time_applicant", "label": "second time applicant", "shape": "dot", "title": "Type: Concept"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "concept_re_write_coc_full", "label": "write it all over again", "shape": "dot", "title": "Type: Concept"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "feature_experience_github_git", "label": "Experience with GitHub \u0026 Git", "shape": "dot", "title": "Type: Planned Feature"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "feature_build_pgrouting_locally", "label": "Build locally pgRouting", "shape": "dot", "title": "Type: Planned Feature"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "concept_pgrouting", "label": "pgRouting", "shape": "dot", "title": "Type: Concept"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "feature_get_familiar_cpp", "label": "Get familiar with C++", "shape": "dot", "title": "Type: Planned Feature"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "concept_cpp", "label": "C++", "shape": "dot", "title": "Type: Concept"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "feature_get_familiar_pgrouting", "label": "Get familiar with pgRouting", "shape": "dot", "title": "Type: Planned Feature"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "feature_write_self_paragraph", "label": "Write a paragraph about yourself in a comment of this issue.", "shape": "dot", "title": "Type: Planned Feature"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "feature_handwrite_code_of_conduct_copy", "label": "Handwrite a copy the code of conduct", "shape": "dot", "title": "Type: Planned Feature"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "concept_code_of_conduct_document", "label": "code of conduct", "shape": "dot", "title": "Type: Concept"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "feature_take_picture_upload_coc", "label": "Take a picture of copy and upload on a comment of this issue.", "shape": "dot", "title": "Type: Planned Feature"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "component_pgrouting", "label": "pgRouting", "shape": "dot", "title": "Type: Component"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "feature_add_ranjodh_singh_to_contributors_list", "label": "Add Ranjodh Singh to contributors list", "shape": "dot", "title": "Type: Planned Feature"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "person_ranjodh_singh", "label": "Ranjodh Singh", "shape": "dot", "title": "Type: Person"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "concept_list_of_contributors", "label": "list of contributors", "shape": "dot", "title": "Type: Concept"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "document_pgrouting_introduction_rst", "label": "pgRouting-introduction.rst", "shape": "dot", "title": "Type: Document"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "intent_of_application_task", "label": "Intent of application", "shape": "dot", "title": "Type: Feature"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "code_of_conduct_reproduction_task", "label": "Code of Conduct reproduction", "shape": "dot", "title": "Type: Feature"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "github_git_experience_task", "label": "Experience with GitHub \u0026 Git", "shape": "dot", "title": "Type: Feature"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "build_locally_pgrouting_task", "label": "Build locally pgRouting", "shape": "dot", "title": "Type: Feature"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "get_familiar_cpp_task", "label": "Get familiar with C++", "shape": "dot", "title": "Type: Feature"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "cpp_language_component", "label": "C++", "shape": "dot", "title": "Type: Component"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "get_familiar_pgrouting_task", "label": "Get familiar with pgRouting", "shape": "dot", "title": "Type: Feature"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "write_self_paragraph_task", "label": "Write a paragraph about yourself", "shape": "dot", "title": "Type: Feature"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "code_of_conduct_document", "label": "Code of conduct", "shape": "dot", "title": "Type: Document"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "handwrite_coc_copy_task", "label": "Handwrite a copy the [code of conduct]", "shape": "dot", "title": "Type: Feature"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "take_picture_upload_coc_task", "label": "Take a picture of copy and upload", "shape": "dot", "title": "Type: Feature"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "linter_rule_cppcoreguidelines_pro_bounds_array_to_pointer_decay", "label": "cppcoreguidelines-pro-bounds-array-to-pointer-decay", "shape": "dot", "title": "Type: Linter Rule"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "config_file_clang_tidy", "label": ".clang-tidy", "shape": "dot", "title": "Type: Configuration File"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "tech_debt_warnings_implicit_array_to_pointer_decay", "label": "warnings related to implicit array-to-pointer decay", "shape": "dot", "title": "Type: Technical Debt Item"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "fix_action_for_decay_warnings", "label": "Fix Action for Implicit Array-to-Pointer Decay Warnings", "shape": "dot", "title": "Type: Action"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "tech_debt_issue_implicit_array_to_pointer_decay", "label": "implicit array-to-pointer decay", "shape": "dot", "title": "Type: Technical Debt Issue"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "code_component_assert_cpp", "label": "src/common/assert.cpp", "shape": "dot", "title": "Type: Code Component File"}, {"color": "#add8e6", "font": {"color": "black"}, "id": "function_backtrace", "label": "backtrace()", "shape": "dot", "title": "Type: Function"}]);
+                  edges = new vis.DataSet([{"arrows": "to", "from": "planned_feature_update_contributor_acknowledgments_list", "label": "is_part_of", "title": "is_part_of (Valid: 2026-02-27T21:14:28Z)", "to": "planned_feature_v4_0_0_release"}, {"arrows": "to", "from": "feature_intent_application_general", "label": "is_in_status", "title": "is_in_status (Valid: 2026-02-27T13:26:08Z)", "to": "concept_status_completed"}, {"arrows": "to", "from": "feature_code_of_conduct_reproduction", "label": "is_in_status", "title": "is_in_status (Valid: 2026-02-27T13:26:08Z)", "to": "concept_status_pending"}, {"arrows": "to", "from": "feature_code_of_conduct_reproduction", "label": "has_condition_for_action", "title": "has_condition_for_action (Valid: 2026-02-27T13:26:08Z)", "to": "concept_second_time_applicant"}, {"arrows": "to", "from": "concept_second_time_applicant", "label": "implies_action", "title": "implies_action (Valid: 2026-02-27T13:26:08Z)", "to": "concept_re_write_coc_full"}, {"arrows": "to", "from": "feature_experience_github_git", "label": "is_in_status", "title": "is_in_status (Valid: 2026-02-27T13:26:08Z)", "to": "concept_status_completed"}, {"arrows": "to", "from": "feature_build_pgrouting_locally", "label": "is_in_status", "title": "is_in_status (Valid: 2026-02-27T13:26:08Z)", "to": "concept_status_completed"}, {"arrows": "to", "from": "feature_build_pgrouting_locally", "label": "involves_technology", "title": "involves_technology (Valid: 2026-02-27T13:26:08Z)", "to": "concept_pgrouting"}, {"arrows": "to", "from": "feature_get_familiar_cpp", "label": "is_in_status", "title": "is_in_status (Valid: 2026-02-27T13:26:08Z)", "to": "concept_status_pending"}, {"arrows": "to", "from": "feature_get_familiar_cpp", "label": "involves_technology", "title": "involves_technology (Valid: 2026-02-27T13:26:08Z)", "to": "concept_cpp"}, {"arrows": "to", "from": "feature_get_familiar_pgrouting", "label": "is_in_status", "title": "is_in_status (Valid: 2026-02-27T13:26:08Z)", "to": "concept_status_pending"}, {"arrows": "to", "from": "feature_get_familiar_pgrouting", "label": "involves_technology", "title": "involves_technology (Valid: 2026-02-27T13:26:08Z)", "to": "concept_pgrouting"}, {"arrows": "to", "from": "feature_write_self_paragraph", "label": "is_in_status", "title": "is_in_status (Valid: 2026-02-27T13:26:08Z)", "to": "concept_status_completed"}, {"arrows": "to", "from": "feature_handwrite_code_of_conduct_copy", "label": "is_in_status", "title": "is_in_status (Valid: 2026-02-27T13:26:08Z)", "to": "concept_status_pending"}, {"arrows": "to", "from": "feature_handwrite_code_of_conduct_copy", "label": "refers_to_document", "title": "refers_to_document (Valid: 2026-02-27T13:26:08Z)", "to": "concept_code_of_conduct_document"}, {"arrows": "to", "from": "feature_take_picture_upload_coc", "label": "is_in_status", "title": "is_in_status (Valid: 2026-02-27T13:26:08Z)", "to": "concept_status_pending"}, {"arrows": "to", "from": "feature_take_picture_upload_coc", "label": "is_subtask_of", "title": "is_subtask_of (Valid: 2026-02-27T13:26:08Z)", "to": "feature_handwrite_code_of_conduct_copy"}, {"arrows": "to", "from": "feature_build_pgrouting_locally", "label": "involves", "title": "involves (Valid: 2026-02-27T10:10:32Z)", "to": "component_pgrouting"}, {"arrows": "to", "from": "feature_get_familiar_pgrouting", "label": "involves", "title": "involves (Valid: 2026-02-27T10:10:32Z)", "to": "component_pgrouting"}, {"arrows": "to", "from": "feature_add_ranjodh_singh_to_contributors_list", "label": "involves", "title": "involves (Valid: 2026-02-23T14:30:07Z)", "to": "person_ranjodh_singh"}, {"arrows": "to", "from": "concept_list_of_contributors", "label": "is_part_of", "title": "is_part_of (Valid: Always)", "to": "document_pgrouting_introduction_rst"}, {"arrows": "to", "from": "intent_of_application_task", "label": "is_a_planned_feature_task", "title": "is_a_planned_feature_task (Valid: 2026-02-23T11:45:49Z)", "to": "intent_of_application_task"}, {"arrows": "to", "from": "code_of_conduct_reproduction_task", "label": "is_a_planned_feature_task", "title": "is_a_planned_feature_task (Valid: 2026-02-23T11:45:49Z)", "to": "code_of_conduct_reproduction_task"}, {"arrows": "to", "from": "github_git_experience_task", "label": "is_a_planned_feature_task", "title": "is_a_planned_feature_task (Valid: 2026-02-23T11:45:49Z)", "to": "github_git_experience_task"}, {"arrows": "to", "from": "build_locally_pgrouting_task", "label": "is_a_planned_feature_task", "title": "is_a_planned_feature_task (Valid: 2026-02-23T11:45:49Z)", "to": "build_locally_pgrouting_task"}, {"arrows": "to", "from": "component_pgrouting", "label": "is_a_software_component", "title": "is_a_software_component (Valid: 2026-02-23T11:45:49Z)", "to": "component_pgrouting"}, {"arrows": "to", "from": "get_familiar_cpp_task", "label": "is_a_planned_feature_task", "title": "is_a_planned_feature_task (Valid: 2026-02-23T11:45:49Z)", "to": "get_familiar_cpp_task"}, {"arrows": "to", "from": "cpp_language_component", "label": "is_a_programming_language_component", "title": "is_a_programming_language_component (Valid: 2026-02-23T11:45:49Z)", "to": "cpp_language_component"}, {"arrows": "to", "from": "get_familiar_pgrouting_task", "label": "is_a_planned_feature_task", "title": "is_a_planned_feature_task (Valid: 2026-02-23T11:45:49Z)", "to": "get_familiar_pgrouting_task"}, {"arrows": "to", "from": "write_self_paragraph_task", "label": "is_a_subtask_for", "title": "is_a_subtask_for (Valid: 2026-02-23T11:45:49Z)", "to": "intent_of_application_task"}, {"arrows": "to", "from": "code_of_conduct_document", "label": "is_a_document", "title": "is_a_document (Valid: 2026-02-23T11:45:49Z)", "to": "code_of_conduct_document"}, {"arrows": "to", "from": "handwrite_coc_copy_task", "label": "references_document", "title": "references_document (Valid: 2026-02-23T11:45:49Z)", "to": "code_of_conduct_document"}, {"arrows": "to", "from": "take_picture_upload_coc_task", "label": "is_a_subtask_for", "title": "is_a_subtask_for (Valid: 2026-02-23T11:45:49Z)", "to": "handwrite_coc_copy_task"}, {"arrows": "to", "from": "linter_rule_cppcoreguidelines_pro_bounds_array_to_pointer_decay", "label": "is_enabled_in", "title": "is_enabled_in (Valid: 2026-02-19T07:56:24Z)", "to": "config_file_clang_tidy"}, {"arrows": "to", "from": "tech_debt_warnings_implicit_array_to_pointer_decay", "label": "was_target_of", "title": "was_target_of (Valid: 2026-02-19T07:56:24Z)", "to": "fix_action_for_decay_warnings"}, {"arrows": "to", "from": "tech_debt_issue_implicit_array_to_pointer_decay", "label": "was_fixed_in", "title": "was_fixed_in (Valid: 2026-02-19T07:56:24Z)", "to": "code_component_assert_cpp"}, {"arrows": "to", "from": "code_component_assert_cpp", "label": "calls", "title": "calls (Valid: 2026-02-19T07:56:24Z)", "to": "function_backtrace"}]);
+
+                  nodeColors = {};
+                  allNodes = nodes.get({ returnType: "Object" });
+                  for (nodeId in allNodes) {
+                    nodeColors[nodeId] = allNodes[nodeId].color;
+                  }
+                  allEdges = edges.get({ returnType: "Object" });
+                  // adding nodes and edges to the graph
+                  data = {nodes: nodes, edges: edges};
+
+                  var options = {"nodes": {"font": {"size": 16}}, "edges": {"font": {"size": 12, "align": "middle"}, "arrows": {"to": {"enabled": true}}}, "physics": {"barnesHut": {"gravitationalConstant": -3000}}};
+
+                  
+
+
+                  
+
+                  network = new vis.Network(container, data, options);
+
+                  
+
+                  
+
+                  
+
+
+                  
+
+                  return network;
+
+              }
+              drawGraph();
+        </script>
+    </body>
+</html>

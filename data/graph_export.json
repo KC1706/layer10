@@ -1,0 +1,633 @@
+{
+  "directed": true,
+  "multigraph": true,
+  "graph": {},
+  "nodes": [
+    {
+      "name": "Update contributor acknowledgments list",
+      "type": "Planned Feature",
+      "aliases": [],
+      "id": "planned_feature_update_contributor_acknowledgments_list"
+    },
+    {
+      "name": "v4.0.0 release",
+      "type": "Planned Feature",
+      "aliases": [],
+      "id": "planned_feature_v4_0_0_release"
+    },
+    {
+      "name": "#533",
+      "type": "Technical Debt",
+      "aliases": [
+        "533"
+      ],
+      "id": "technical_debt_issue_533"
+    },
+    {
+      "name": "Intent of application",
+      "type": "Planned Feature",
+      "aliases": [],
+      "id": "feature_intent_application_general"
+    },
+    {
+      "name": "Code of Conduct reproduction",
+      "type": "Planned Feature",
+      "aliases": [],
+      "id": "feature_code_of_conduct_reproduction"
+    },
+    {
+      "name": "second time applicant",
+      "type": "Concept",
+      "aliases": [
+        "second time application",
+        "applying for the second time"
+      ],
+      "id": "concept_second_time_applicant"
+    },
+    {
+      "name": "write it all over again",
+      "type": "Concept",
+      "aliases": [],
+      "id": "concept_re_write_coc_full"
+    },
+    {
+      "name": "Experience with GitHub & Git",
+      "type": "Planned Feature",
+      "aliases": [],
+      "id": "feature_experience_github_git"
+    },
+    {
+      "name": "Build locally pgRouting",
+      "type": "Planned Feature",
+      "aliases": [],
+      "id": "feature_build_pgrouting_locally"
+    },
+    {
+      "name": "pgRouting",
+      "type": "Concept",
+      "aliases": [],
+      "id": "concept_pgrouting"
+    },
+    {
+      "name": "Get familiar with C++",
+      "type": "Planned Feature",
+      "aliases": [],
+      "id": "feature_get_familiar_cpp"
+    },
+    {
+      "name": "C++",
+      "type": "Concept",
+      "aliases": [],
+      "id": "concept_cpp"
+    },
+    {
+      "name": "Get familiar with pgRouting",
+      "type": "Planned Feature",
+      "aliases": [],
+      "id": "feature_get_familiar_pgrouting"
+    },
+    {
+      "name": "Write a paragraph about yourself in a comment of this issue.",
+      "type": "Planned Feature",
+      "aliases": [],
+      "id": "feature_write_self_paragraph"
+    },
+    {
+      "name": "Handwrite a copy the code of conduct",
+      "type": "Planned Feature",
+      "aliases": [],
+      "id": "feature_handwrite_code_of_conduct_copy"
+    },
+    {
+      "name": "code of conduct",
+      "type": "Concept",
+      "aliases": [
+        "CODE_OF_CONDUCT.md"
+      ],
+      "id": "concept_code_of_conduct_document"
+    },
+    {
+      "name": "Take a picture of copy and upload on a comment of this issue.",
+      "type": "Planned Feature",
+      "aliases": [],
+      "id": "feature_take_picture_upload_coc"
+    },
+    {
+      "name": "completed",
+      "type": "Concept",
+      "aliases": [],
+      "id": "concept_status_completed"
+    },
+    {
+      "name": "pending",
+      "type": "Concept",
+      "aliases": [],
+      "id": "concept_status_pending"
+    },
+    {
+      "name": "pgRouting",
+      "type": "Component",
+      "aliases": [],
+      "id": "component_pgrouting"
+    },
+    {
+      "name": "Ranjodh Singh",
+      "type": "Person",
+      "aliases": [],
+      "id": "person_ranjodh_singh"
+    },
+    {
+      "name": "pgRouting-introduction.rst",
+      "type": "Document",
+      "aliases": [],
+      "id": "document_pgrouting_introduction_rst"
+    },
+    {
+      "name": "list of contributors",
+      "type": "Concept",
+      "aliases": [],
+      "id": "concept_list_of_contributors"
+    },
+    {
+      "name": "Add Ranjodh Singh to contributors list",
+      "type": "Planned Feature",
+      "aliases": [],
+      "id": "feature_add_ranjodh_singh_to_contributors_list"
+    },
+    {
+      "name": "Intent of application",
+      "type": "Feature",
+      "aliases": [],
+      "id": "intent_of_application_task"
+    },
+    {
+      "name": "Code of Conduct reproduction",
+      "type": "Feature",
+      "aliases": [],
+      "id": "code_of_conduct_reproduction_task"
+    },
+    {
+      "name": "write it all over again",
+      "type": "Feature",
+      "aliases": [],
+      "id": "write_coc_again_task"
+    },
+    {
+      "name": "Experience with GitHub & Git",
+      "type": "Feature",
+      "aliases": [],
+      "id": "github_git_experience_task"
+    },
+    {
+      "name": "Build locally pgRouting",
+      "type": "Feature",
+      "aliases": [],
+      "id": "build_locally_pgrouting_task"
+    },
+    {
+      "name": "C++",
+      "type": "Component",
+      "aliases": [],
+      "id": "cpp_language_component"
+    },
+    {
+      "name": "Get familiar with C++",
+      "type": "Feature",
+      "aliases": [],
+      "id": "get_familiar_cpp_task"
+    },
+    {
+      "name": "Get familiar with pgRouting",
+      "type": "Feature",
+      "aliases": [],
+      "id": "get_familiar_pgrouting_task"
+    },
+    {
+      "name": "Write a paragraph about yourself",
+      "type": "Feature",
+      "aliases": [],
+      "id": "write_self_paragraph_task"
+    },
+    {
+      "name": "Code of conduct",
+      "type": "Document",
+      "aliases": [],
+      "id": "code_of_conduct_document"
+    },
+    {
+      "name": "Handwrite a copy the [code of conduct]",
+      "type": "Feature",
+      "aliases": [],
+      "id": "handwrite_coc_copy_task"
+    },
+    {
+      "name": "Take a picture of copy and upload",
+      "type": "Feature",
+      "aliases": [],
+      "id": "take_picture_upload_coc_task"
+    },
+    {
+      "name": "GSoC Task 2",
+      "type": "Planned Feature",
+      "aliases": [
+        "Task 2"
+      ],
+      "id": "planned_feature_gsoc_task_2"
+    },
+    {
+      "name": "Add name to contributors section in pgRouting-introduction.rst",
+      "type": "Planned Feature",
+      "aliases": [],
+      "id": "planned_feature_add_name_to_contributors_pgrouting_rst"
+    },
+    {
+      "name": "cppcoreguidelines-pro-bounds-array-to-pointer-decay",
+      "type": "Linter Rule",
+      "aliases": [],
+      "id": "linter_rule_cppcoreguidelines_pro_bounds_array_to_pointer_decay"
+    },
+    {
+      "name": ".clang-tidy",
+      "type": "Configuration File",
+      "aliases": [],
+      "id": "config_file_clang_tidy"
+    },
+    {
+      "name": "warnings related to implicit array-to-pointer decay",
+      "type": "Technical Debt Item",
+      "aliases": [],
+      "id": "tech_debt_warnings_implicit_array_to_pointer_decay"
+    },
+    {
+      "name": "Fix Action for Implicit Array-to-Pointer Decay Warnings",
+      "type": "Action",
+      "aliases": [],
+      "id": "fix_action_for_decay_warnings"
+    },
+    {
+      "name": "implicit array-to-pointer decay",
+      "type": "Technical Debt Issue",
+      "aliases": [],
+      "id": "tech_debt_issue_implicit_array_to_pointer_decay"
+    },
+    {
+      "name": "src/breadthFirstSearch/binaryBreadthFirstSearch_driver.cpp",
+      "type": "Code Component File",
+      "aliases": [],
+      "id": "code_component_binary_breadth_first_search_driver_cpp"
+    },
+    {
+      "name": "src/common/assert.cpp",
+      "type": "Code Component File",
+      "aliases": [],
+      "id": "code_component_assert_cpp"
+    },
+    {
+      "name": "backtrace()",
+      "type": "Function",
+      "aliases": [],
+      "id": "function_backtrace"
+    },
+    {
+      "name": "backtrace_symbols()",
+      "type": "Function",
+      "aliases": [],
+      "id": "function_backtrace_symbols"
+    }
+  ],
+  "links": [
+    {
+      "predicate": "is_part_of",
+      "valid_at": "2026-02-27T21:14:28Z",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "planned_feature_update_contributor_acknowledgments_list",
+      "target": "planned_feature_v4_0_0_release",
+      "key": "claim_2b352ec8"
+    },
+    {
+      "predicate": "is_in_status",
+      "valid_at": "2026-02-27T13:26:08Z",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "feature_intent_application_general",
+      "target": "concept_status_completed",
+      "key": "claim_d3d8565c"
+    },
+    {
+      "predicate": "is_in_status",
+      "valid_at": "2026-02-27T13:26:08Z",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "feature_code_of_conduct_reproduction",
+      "target": "concept_status_pending",
+      "key": "claim_f2b32702"
+    },
+    {
+      "predicate": "has_condition_for_action",
+      "valid_at": "2026-02-27T13:26:08Z",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "feature_code_of_conduct_reproduction",
+      "target": "concept_second_time_applicant",
+      "key": "claim_5f01972e"
+    },
+    {
+      "predicate": "implies_action",
+      "valid_at": "2026-02-27T13:26:08Z",
+      "invalid_at": "",
+      "evidence_count": 2,
+      "source": "concept_second_time_applicant",
+      "target": "concept_re_write_coc_full",
+      "key": "claim_b9c31329"
+    },
+    {
+      "predicate": "is_in_status",
+      "valid_at": "2026-02-27T13:26:08Z",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "feature_experience_github_git",
+      "target": "concept_status_completed",
+      "key": "claim_ef933e03"
+    },
+    {
+      "predicate": "is_in_status",
+      "valid_at": "2026-02-27T13:26:08Z",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "feature_build_pgrouting_locally",
+      "target": "concept_status_completed",
+      "key": "claim_b6d7fb5a"
+    },
+    {
+      "predicate": "involves_technology",
+      "valid_at": "2026-02-27T13:26:08Z",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "feature_build_pgrouting_locally",
+      "target": "concept_pgrouting",
+      "key": "claim_5bb92e05"
+    },
+    {
+      "predicate": "involves",
+      "valid_at": "2026-02-27T10:10:32Z",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "feature_build_pgrouting_locally",
+      "target": "component_pgrouting",
+      "key": "claim_22471687"
+    },
+    {
+      "predicate": "is_in_status",
+      "valid_at": "2026-02-27T13:26:08Z",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "feature_get_familiar_cpp",
+      "target": "concept_status_pending",
+      "key": "claim_be90c551"
+    },
+    {
+      "predicate": "involves_technology",
+      "valid_at": "2026-02-27T13:26:08Z",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "feature_get_familiar_cpp",
+      "target": "concept_cpp",
+      "key": "claim_ca096e2d"
+    },
+    {
+      "predicate": "is_in_status",
+      "valid_at": "2026-02-27T13:26:08Z",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "feature_get_familiar_pgrouting",
+      "target": "concept_status_pending",
+      "key": "claim_fd502f30"
+    },
+    {
+      "predicate": "involves_technology",
+      "valid_at": "2026-02-27T13:26:08Z",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "feature_get_familiar_pgrouting",
+      "target": "concept_pgrouting",
+      "key": "claim_05d4fc2b"
+    },
+    {
+      "predicate": "involves",
+      "valid_at": "2026-02-27T10:10:32Z",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "feature_get_familiar_pgrouting",
+      "target": "component_pgrouting",
+      "key": "claim_e6e28117"
+    },
+    {
+      "predicate": "is_in_status",
+      "valid_at": "2026-02-27T13:26:08Z",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "feature_write_self_paragraph",
+      "target": "concept_status_completed",
+      "key": "claim_f5786b0c"
+    },
+    {
+      "predicate": "is_in_status",
+      "valid_at": "2026-02-27T13:26:08Z",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "feature_handwrite_code_of_conduct_copy",
+      "target": "concept_status_pending",
+      "key": "claim_494c52e5"
+    },
+    {
+      "predicate": "refers_to_document",
+      "valid_at": "2026-02-27T13:26:08Z",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "feature_handwrite_code_of_conduct_copy",
+      "target": "concept_code_of_conduct_document",
+      "key": "claim_78e8f637"
+    },
+    {
+      "predicate": "is_in_status",
+      "valid_at": "2026-02-27T13:26:08Z",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "feature_take_picture_upload_coc",
+      "target": "concept_status_pending",
+      "key": "claim_8c714fa3"
+    },
+    {
+      "predicate": "is_subtask_of",
+      "valid_at": "2026-02-27T13:26:08Z",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "feature_take_picture_upload_coc",
+      "target": "feature_handwrite_code_of_conduct_copy",
+      "key": "claim_99448b2c"
+    },
+    {
+      "predicate": "is_a_software_component",
+      "valid_at": "2026-02-23T11:45:49Z",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "component_pgrouting",
+      "target": "component_pgrouting",
+      "key": "claim_cada6d41"
+    },
+    {
+      "predicate": "is_part_of",
+      "valid_at": "Always",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "concept_list_of_contributors",
+      "target": "document_pgrouting_introduction_rst",
+      "key": "claim_f892a074"
+    },
+    {
+      "predicate": "involves",
+      "valid_at": "2026-02-23T14:30:07Z",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "feature_add_ranjodh_singh_to_contributors_list",
+      "target": "person_ranjodh_singh",
+      "key": "claim_3d9c20d6"
+    },
+    {
+      "predicate": "is_a_planned_feature_task",
+      "valid_at": "2026-02-23T11:45:49Z",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "intent_of_application_task",
+      "target": "intent_of_application_task",
+      "key": "claim_8c8017cc"
+    },
+    {
+      "predicate": "is_a_planned_feature_task",
+      "valid_at": "2026-02-23T11:45:49Z",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "code_of_conduct_reproduction_task",
+      "target": "code_of_conduct_reproduction_task",
+      "key": "claim_65e01dde"
+    },
+    {
+      "predicate": "is_a_planned_feature_task",
+      "valid_at": "2026-02-23T11:45:49Z",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "github_git_experience_task",
+      "target": "github_git_experience_task",
+      "key": "claim_7ced090f"
+    },
+    {
+      "predicate": "is_a_planned_feature_task",
+      "valid_at": "2026-02-23T11:45:49Z",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "build_locally_pgrouting_task",
+      "target": "build_locally_pgrouting_task",
+      "key": "claim_92b4d559"
+    },
+    {
+      "predicate": "is_a_programming_language_component",
+      "valid_at": "2026-02-23T11:45:49Z",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "cpp_language_component",
+      "target": "cpp_language_component",
+      "key": "claim_d7ad7396"
+    },
+    {
+      "predicate": "is_a_planned_feature_task",
+      "valid_at": "2026-02-23T11:45:49Z",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "get_familiar_cpp_task",
+      "target": "get_familiar_cpp_task",
+      "key": "claim_29c58637"
+    },
+    {
+      "predicate": "is_a_planned_feature_task",
+      "valid_at": "2026-02-23T11:45:49Z",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "get_familiar_pgrouting_task",
+      "target": "get_familiar_pgrouting_task",
+      "key": "claim_2ce1542b"
+    },
+    {
+      "predicate": "is_a_subtask_for",
+      "valid_at": "2026-02-23T11:45:49Z",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "write_self_paragraph_task",
+      "target": "intent_of_application_task",
+      "key": "claim_eac210d5"
+    },
+    {
+      "predicate": "is_a_document",
+      "valid_at": "2026-02-23T11:45:49Z",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "code_of_conduct_document",
+      "target": "code_of_conduct_document",
+      "key": "claim_06730d05"
+    },
+    {
+      "predicate": "references_document",
+      "valid_at": "2026-02-23T11:45:49Z",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "handwrite_coc_copy_task",
+      "target": "code_of_conduct_document",
+      "key": "claim_d9098fba"
+    },
+    {
+      "predicate": "is_a_subtask_for",
+      "valid_at": "2026-02-23T11:45:49Z",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "take_picture_upload_coc_task",
+      "target": "handwrite_coc_copy_task",
+      "key": "claim_e0fb9e3d"
+    },
+    {
+      "predicate": "is_enabled_in",
+      "valid_at": "2026-02-19T07:56:24Z",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "linter_rule_cppcoreguidelines_pro_bounds_array_to_pointer_decay",
+      "target": "config_file_clang_tidy",
+      "key": "claim_4940b271"
+    },
+    {
+      "predicate": "was_target_of",
+      "valid_at": "2026-02-19T07:56:24Z",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "tech_debt_warnings_implicit_array_to_pointer_decay",
+      "target": "fix_action_for_decay_warnings",
+      "key": "claim_174f8af6"
+    },
+    {
+      "predicate": "was_fixed_in",
+      "valid_at": "2026-02-19T07:56:24Z",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "tech_debt_issue_implicit_array_to_pointer_decay",
+      "target": "code_component_assert_cpp",
+      "key": "claim_18e04227"
+    },
+    {
+      "predicate": "calls",
+      "valid_at": "2026-02-19T07:56:24Z",
+      "invalid_at": "",
+      "evidence_count": 1,
+      "source": "code_component_assert_cpp",
+      "target": "function_backtrace",
+      "key": "claim_d622ac79"
+    }
+  ]
+}
